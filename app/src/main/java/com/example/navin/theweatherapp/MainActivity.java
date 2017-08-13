@@ -21,15 +21,15 @@ import model.Weather;
 public class MainActivity extends AppCompatActivity {
 
     private TextView cityName;
-    private TextView temp;
+    //private TextView temp;
     // >> ADD ICON IF NEEDED <<
     private TextView description;
-    private TextView humidity;
+    /*private TextView humidity;
     private TextView pressure;
     private TextView wind;
     private TextView sunrise;
     private TextView sunset;
-    private TextView updated;
+    private TextView updated;*/
 
     private String myAppId = "dcb6553bfccc040683d9917eedd6cfbe";
 
@@ -42,14 +42,14 @@ public class MainActivity extends AppCompatActivity {
 
         cityName = (TextView) findViewById(R.id.cityText);
         //iconView = (ImageView) findViewById(R.id.thumbnailIcon); >> ADD ICON IF NEEDED <<
-        temp = (TextView) findViewById(R.id.tempText);
+        /*temp = (TextView) findViewById(R.id.tempText);*/
         description = (TextView) findViewById(R.id.cloudText); // ?
-        humidity = (TextView) findViewById(R.id.humidText);
+        /*humidity = (TextView) findViewById(R.id.humidText);
         pressure = (TextView) findViewById(R.id.pressureText);
         wind = (TextView) findViewById(R.id.windText);
         sunrise = (TextView) findViewById(R.id.riseText);
         sunset = (TextView) findViewById(R.id.setText);
-        updated = (TextView) findViewById(R.id.updateText);
+        updated = (TextView) findViewById(R.id.updateText);*/
 
         renderWeatherData("Colombo,LK");
         //Colombo,LK
@@ -86,22 +86,22 @@ public class MainActivity extends AppCompatActivity {
             //Formatting data the way I want to display
             DateFormat df = DateFormat.getTimeInstance();
 
-            String sunriseDate = df.format(new Date(weather.place.getSunrise()));
+            /*String sunriseDate = df.format(new Date(weather.place.getSunrise()));
             String sunsetDate = df.format(new Date(weather.place.getSunset()));
-            String updateDate = df.format(new Date(weather.place.getLastupdate()));
+            String updateDate = df.format(new Date(weather.place.getLastupdate()));*/
 
-            DecimalFormat decimalFormat = new DecimalFormat("#.#");
+            /*DecimalFormat decimalFormat = new DecimalFormat("#.#");
 
-            String tempFormat = decimalFormat.format(weather.currentCondition.getTemperature());
+            String tempFormat = decimalFormat.format(weather.currentCondition.getTemperature());*/
 
             cityName.setText(weather.place.getCity()+","+weather.place.getCountry());
-            temp.setText(""+tempFormat+"°C");
+            /*temp.setText(""+tempFormat+"°C");
             humidity.setText("Humidity: "+weather.currentCondition.getHumidity()+"%");
             pressure.setText("Pressure: "+weather.currentCondition.getPressure()+"hPa");
             wind.setText("Wind: "+weather.wind.getSpeed()+"mps");
             sunrise.setText("Sunrise: "+sunriseDate);
             sunset.setText("Sunset: "+sunsetDate);
-            updated.setText("Last Updated: "+updateDate);
+            updated.setText("Last Updated: "+updateDate);*/
             description.setText("Condition: "+weather.currentCondition.getCondition()
                     +"("+weather.currentCondition.getDescription()+")");
         }
