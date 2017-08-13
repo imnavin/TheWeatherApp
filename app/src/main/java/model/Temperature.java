@@ -6,7 +6,7 @@ package model;
 
 public class Temperature {
 
-    private double temp;
+    /*private double temp;
     private float minTemp;
     private float maxTemp;
 
@@ -32,5 +32,7 @@ public class Temperature {
 
     public void setMaxTemp(float maxTemp) {
         this.maxTemp = maxTemp;
-    }
+    }*/
+
+    //DELETE WHOLE
 }

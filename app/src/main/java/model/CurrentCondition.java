@@ -9,11 +9,11 @@ public class CurrentCondition {
     private int weatherId;
     private String condition;
     private String description;
-    private float pressure;
+    /*private float pressure;
     private float humidity;
     private float maxTemp;
     private float minTemp;
-    private double temperature;
+    private double temperature;*/
 
     public int getWeatherId() {
         return weatherId;
@@ -39,7 +39,7 @@ public class CurrentCondition {
         this.description = description;
     }
 
-    public float getPressure() {
+    /*public float getPressure() {
         return pressure;
     }
 
@@ -77,5 +77,5 @@ public class CurrentCondition {
 
     public void setTemperature(double temperature) {
         this.temperature = temperature;
-    }
+    }*/
 }

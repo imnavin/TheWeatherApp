@@ -5,7 +5,7 @@ package model;
  */
 
 public class Wind {
-    private float speed;
+    /*private float speed;
     private float deg;
 
     public float getSpeed() {
@@ -22,5 +22,7 @@ public class Wind {
 
     public void setDeg(float deg) {
         this.deg = deg;
-    }
+    }*/
+
+    //DELETE WHOLE
 }

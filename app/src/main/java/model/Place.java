@@ -8,11 +8,11 @@ public class Place {
 
     private float lon;
     private float lat;
-    private long sunset;
-    private long sunrise;
+    /*private long sunset;
+    private long sunrise;*/
     private String country;
     private String city;
-    private long lastupdate;
+    /*private long lastupdate;*/
 
     public float getLon() {
         return lon;
@@ -30,7 +30,7 @@ public class Place {
         this.lat = lat;
     }
 
-    public long getSunset() {
+    /*public long getSunset() {
         return sunset;
     }
 
@@ -44,7 +44,7 @@ public class Place {
 
     public void setSunrise(long sunrise) {
         this.sunrise = sunrise;
-    }
+    }*/
 
     public String getCountry() {
         return country;
@@ -62,11 +62,11 @@ public class Place {
         this.city = city;
     }
 
-    public long getLastupdate() {
+    /*public long getLastupdate() {
         return lastupdate;
     }
 
     public void setLastupdate(long lastupdate) {
         this.lastupdate = lastupdate;
-    }
+    }*/
 }
