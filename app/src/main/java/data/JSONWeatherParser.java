@@ -27,9 +27,9 @@ public class JSONWeatherParser {
             //Get the sys object
             JSONObject sysObj = Utils.getObject("sys",jsonObject);
             place.setCountry(Utils.getString("country",sysObj));
-            place.setLastupdate(Utils.getInt("dt", jsonObject));
+            /*place.setLastupdate(Utils.getInt("dt", jsonObject));
             place.setSunrise(Utils.getInt("sunrise",sysObj));
-            place.setSunset(Utils.getInt("sunset",sysObj));
+            place.setSunset(Utils.getInt("sunset",sysObj));*/
             place.setCity(Utils.getString("name",jsonObject));
             weather.place = place;
 
@@ -42,18 +42,18 @@ public class JSONWeatherParser {
             // >> ADD ICON CODE IF NEEDED <<
 
             //Get the main info
-            JSONObject mainObj = Utils.getObject("main",jsonObject);
+            /*JSONObject mainObj = Utils.getObject("main",jsonObject);
             weather.currentCondition.setHumidity(Utils.getInt("humidity",mainObj));
             weather.currentCondition.setPressure(Utils.getInt("pressure",mainObj));
             weather.currentCondition.setMinTemp(Utils.getFloat("temp_min",mainObj));
             weather.currentCondition.setMaxTemp(Utils.getFloat("temp_max",mainObj));
-            weather.currentCondition.setTemperature(Utils.getDouble("temp",mainObj));
+            weather.currentCondition.setTemperature(Utils.getDouble("temp",mainObj));*/
 
 
             //Get  the wind info
-            JSONObject windObj = Utils.getObject("wind",jsonObject);
+            /*JSONObject windObj = Utils.getObject("wind",jsonObject);
             weather.wind.setSpeed(Utils.getFloat("speed",windObj));
-            weather.wind.setDeg(Utils.getFloat("deg",windObj));
+            weather.wind.setDeg(Utils.getFloat("deg",windObj));*/
 
             //Get the cloud object
             JSONObject cloudObj = Utils.getObject("clouds",jsonObject);

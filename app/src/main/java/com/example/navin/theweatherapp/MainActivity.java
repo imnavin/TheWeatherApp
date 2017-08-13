@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
         sunset = (TextView) findViewById(R.id.setText);
         updated = (TextView) findViewById(R.id.updateText);*/
 
-        renderWeatherData("Colombo,LK");
+        renderWeatherData("Spokane,US");
         //Colombo,LK
         //Spokane,US
     }
