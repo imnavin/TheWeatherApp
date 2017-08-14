@@ -13,16 +13,19 @@ import java.text.DateFormat;
 
 import data.JSONWeatherParser;
 import data.WeatherHttpClient;
+import model.BadWeather;
 import model.Weather;
 
 public class MainActivity extends AppCompatActivity {
 
     private TextView cityName;
     private TextView description;
+    private boolean weatherCondition;
 
     private String myAppId = "dcb6553bfccc040683d9917eedd6cfbe";
 
     Weather weather = new Weather();
+    BadWeather badWeather = new BadWeather();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,7 +57,17 @@ public class MainActivity extends AppCompatActivity {
             weather = JSONWeatherParser.getWeather(data);
 
             //Log.v("Data : ",weather.place.getCity());
-            Log.v("Data : ",weather.currentCondition.getDescription());
+            //Log.v("Data : ",weather.currentCondition.getDescription());
+            String weatherSample = weather.currentCondition.getDescription();
+
+            if ((badWeather.isCloudy(weatherSample)) || (badWeather.isRaining(weatherSample))){
+                weatherCondition = true;
+            }
+            else{
+                weatherCondition = false;
+            }
+
+            Log.v("Good or Bad : ", String.valueOf(weatherCondition));
 
             return weather;
         }
@@ -63,11 +76,6 @@ public class MainActivity extends AppCompatActivity {
         protected void onPostExecute(Weather weather) {
 
             super.onPostExecute(weather);
-
-            //Formatting data the way I want to display
-            DateFormat df = DateFormat.getTimeInstance();
-
-
 
             cityName.setText(weather.place.getCity()+","+weather.place.getCountry());
             description.setText("Condition: "+weather.currentCondition.getCondition()
