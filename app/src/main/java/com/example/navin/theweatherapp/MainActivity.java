@@ -33,9 +33,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         cityName = (TextView) findViewById(R.id.cityText);
-        description = (TextView) findViewById(R.id.cloudText); // ?
+        description = (TextView) findViewById(R.id.cloudText); //?
 
-        renderWeatherData("Spokane,US");
+        renderWeatherData("Colombo,LK");
         //Colombo,LK
         //Spokane,US
     }
